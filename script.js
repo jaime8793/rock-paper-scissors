@@ -21,9 +21,8 @@ function computerChoice() {
 // Function to get human choice
 let humanChoice = "";
 function humanChoiceFunction() {
-  //humanChoice = "paper";
   // Prompt user
-   humanChoice = prompt("Please pick a move").toLowerCase();
+  humanChoice = prompt("Please pick a move").toLowerCase();
 }
 
 // Play round function
@@ -86,8 +85,7 @@ function playRound() {
 
 // Call the functions in the correct order
 
-
-let round = 5
+let round = 5;
 function playGame() {
   for (i = 0; i <= round; i++) {
     console.log("five times");
@@ -99,7 +97,6 @@ function playGame() {
   }
 }
 playGame();
-
 
 console.log(`Final human score: ${humanScore}`);
 console.log(`Final computer score: ${compScore}`);
