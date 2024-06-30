@@ -1,73 +1,105 @@
-console.log("Hello world");
-let humanScore = 0;
-let computerScore = 0;
-//let humanChoice = "";
-//let compChoice = "";
-
-function getComputerChoice() {
-  const compChoice2 = Math.random();
-  let compChoice;
-
-  if (compChoice2 < 0.3) {
+// Function to get computer choice
+let compChoice = "";
+function computerChoice() {
+  // Get random number variable and initialize it
+  const randomNumber = Math.random();
+  console.log(randomNumber);
+  // If statement to get comp choice
+  if (randomNumber < 1 / 3) {
+    console.log("Rock");
     compChoice = "Rock";
-  } else if (compChoice2 <= 0.6) {
-    compChoice = "Paper";
-  } else {
+  } else if (randomNumber < 2 / 3) {
+    console.log("Scissors");
     compChoice = "Scissors";
+  } else {
+    console.log("Paper");
+    compChoice = "Paper";
   }
-
-  console.log(compChoice2); // This is optional, for debugging purposes
-  console.log(compChoice); // This is optional, for debugging purposes
   return compChoice;
 }
 
-//console.log(getComputerChoice());
-
-const compChoice3 = getComputerChoice();
-
-function getHumanChoice() {
-  let humanChoice2 = prompt("What is your choice?")
-  //const humanChoice2 = "Rock";
-  console.log(humanChoice2);
-  console.log(compChoice3);
-  return humanChoice2;
-  //console.log(prompt("What is your choice?"))
+// Function to get human choice
+let humanChoice = "";
+function humanChoiceFunction() {
+  //humanChoice = "paper";
+  // Prompt user
+   humanChoice = prompt("Please pick a move").toLowerCase();
 }
-const humanChoice3 = getHumanChoice();
-console.log(humanChoice3);
 
+// Play round function
+let humanScore = 0;
+let compScore = 0;
 function playRound() {
-  console.log(humanChoice3);
-  console.log(compChoice3);
-  let humanChoice2 = humanChoice3.toLowerCase();
-  console.log(humanChoice2);
-  if (compChoice3 === "Rock") {
-    if (humanChoice3 === "paper") {
+  if (compChoice === "Rock") {
+    if (humanChoice === "paper") {
       console.log("Paper beats Rock you win");
-    } else if (humanChoice3 === "rock") {
+      humanScore++;
+      compScore--;
+      console.log(humanScore);
+    } else if (humanChoice === "rock") {
       console.log("Both chose rock it is a Tie");
-    } else if (humanChoice3 === "scissors") {
+      humanScore += 0.5;
+      compScore += 0.5;
+      console.log(humanScore);
+    } else if (humanChoice === "scissors") {
       console.log("Rock beats scissors you lose");
+      humanScore--;
+      compScore++;
+      console.log(humanScore);
     }
-  } else if (compChoice3 === "Paper") {
-    if (humanChoice3 === "paper") {
+  } else if (compChoice === "Paper") {
+    if (humanChoice === "paper") {
       console.log("Both chose paper it is a Tie");
-    } else if (humanChoice3 === "Rock") {
+      humanScore += 0.5;
+      compScore += 0.5;
+      console.log(humanScore);
+    } else if (humanChoice === "rock") {
       console.log("Paper beats rock you lose");
-    } else if (humanChoice3 === "scissors") {
-      console.log("Scissors beats rock you lose");
+      humanScore--;
+      compScore++;
+      console.log(humanScore);
+    } else if (humanChoice === "scissors") {
+      console.log("Scissors beats rock you win");
+      humanScore++;
+      compScore--;
+      console.log(humanScore);
     }
-  } else if (compChoice3 === "Scissors") {
-    if (humanChoice3 === "paper") {
-      console.log("Scissors beats paper");
-    } else if (humanChoice3 === "Rock") {
-      console.log("Rock beats scissors you lose");
-    } else if (humanChoice3 === "scissors") {
+  } else if (compChoice === "Scissors") {
+    if (humanChoice === "paper") {
+      console.log("Scissors beats paper you lose");
+      humanScore--;
+      compScore++;
+      console.log(humanScore);
+    } else if (humanChoice === "rock") {
+      console.log("Rock beats scissors you win");
+      humanScore++;
+      compScore--;
+      console.log(humanScore);
+    } else if (humanChoice === "scissors") {
       console.log("Both chose scissors it is a Tie");
+      humanScore += 0.5;
+      compScore += 0.5;
+      console.log(humanScore);
     }
   }
 }
 
-//getComputerChoice();
-//getHumanChoice();
-playRound();
+// Call the functions in the correct order
+
+
+let round = 5
+function playGame() {
+  for (i = 0; i <= round; i++) {
+    console.log("five times");
+    humanChoiceFunction();
+    computerChoice();
+    console.log(`Human choice: ${humanChoice}`);
+    console.log(`Computer choice: ${compChoice}`);
+    playRound();
+  }
+}
+playGame();
+
+
+console.log(`Final human score: ${humanScore}`);
+console.log(`Final computer score: ${compScore}`);
