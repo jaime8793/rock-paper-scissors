@@ -85,7 +85,10 @@ function playRound() {
 
 // Call the functions in the correct order
 
-let round = 5;
+
+
+
+/*let round = 5;
 function playGame() {
   for (i = 0; i <= round; i++) {
     console.log("five times");
@@ -96,7 +99,15 @@ function playGame() {
     playRound();
   }
 }
-playGame();
-
+playGame();*/
+humanChoiceFunction();
+computerChoice();
+console.log(`Human choice: ${humanChoice}`);
+console.log(`Computer choice: ${compChoice}`);
+playRound();
 console.log(`Final human score: ${humanScore}`);
 console.log(`Final computer score: ${compScore}`);
+
+
+//UI for the game
+
