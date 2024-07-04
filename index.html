@@ -10,10 +10,25 @@
   </head>
   <body>
     <h1>Rock Paper Scissors Game</h1>
-    <div id="choices">
-      <button id="rock">Rock</button>
-      <button id="paper">Paper</button>
-      <button id="scissors">Scissors</button>
+    <div class="choices">
+      <button
+        id="rpsButtonRock"
+        onclick="humanChoiceRockFunction(); computerChoice(); playRound();"
+      >
+        Rock
+      </button>
+      <button
+        id="rpsButtonPaper"
+        onclick="humanChoicePaperFunction(); computerChoice(); playRound();"
+      >
+        Paper
+      </button>
+      <button
+        id="rpsButtonScissors"
+        onclick="humanChoiceScissorsFunction(); computerChoice(); playRound();"
+      >
+        Scissors
+      </button>
     </div>
   </body>
 </html>

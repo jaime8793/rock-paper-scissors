@@ -20,11 +20,26 @@ function computerChoice() {
 
 // Function to get human choice
 let humanChoice = "";
-function humanChoiceFunction() {
+function humanChoiceRockFunction() {
   // Prompt user
-  humanChoice = prompt("Please pick a move").toLowerCase();
+  //humanChoice = prompt("Please pick a move").toLowerCase();
+  //humanChoice = e.target
+  console.log("human choice mount");
+  //document.getElementById("rock").addEventListener("click", function () {});
+  humanChoice = document.getElementById("rpsButtonRock").innerText;
+  console.log(humanChoice);
 }
 
+function humanChoicePaperFunction() {
+  console.log("human choice mount");
+  humanChoice = document.getElementById("rpsButtonPaper").innerText;
+  console.log(humanChoice);
+}
+function humanChoiceScissorsFunction() {
+  console.log("human choice mount");
+  humanChoice = document.getElementById("rpsButtonScissors").innerText;
+  console.log(humanChoice);
+}
 // Play round function
 let humanScore = 0;
 let compScore = 0;
@@ -85,9 +100,6 @@ function playRound() {
 
 // Call the functions in the correct order
 
-
-
-
 /*let round = 5;
 function playGame() {
   for (i = 0; i <= round; i++) {
@@ -100,14 +112,12 @@ function playGame() {
   }
 }
 playGame();*/
-humanChoiceFunction();
-computerChoice();
+//humanChoiceFunction();
+//computerChoice();
 console.log(`Human choice: ${humanChoice}`);
 console.log(`Computer choice: ${compChoice}`);
-playRound();
+//playRound();
 console.log(`Final human score: ${humanScore}`);
 console.log(`Final computer score: ${compScore}`);
 
-
 //UI for the game
-
