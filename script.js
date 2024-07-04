@@ -43,54 +43,55 @@ function humanChoiceScissorsFunction() {
 // Play round function
 let humanScore = 0;
 let compScore = 0;
+let winOrLose = ""
 function playRound() {
   if (compChoice === "Rock") {
     if (humanChoice === "PAPER") {
-      console.log("Paper beats Rock you win");
+      winOrLose = "Paper beats Rock you win";
       humanScore++;
       compScore--;
       console.log(humanScore);
     } else if (humanChoice === "ROCK") {
-      console.log("Both chose rock it is a Tie");
+      winOrLose = "Both chose rock it is a Tie"
       humanScore += 0.5;
       compScore += 0.5;
       console.log(humanScore);
     } else if (humanChoice === "SCISSORS") {
-      console.log("Rock beats scissors you lose");
+      winOrLose = "Rock beats scissors you lose";
       humanScore--;
       compScore++;
       console.log(humanScore);
     }
   } else if (compChoice === "Paper") {
     if (humanChoice === "PAPER") {
-      console.log("Both chose paper it is a Tie");
+      winOrLose = "Both chose paper it is a Tie";
       humanScore += 0.5;
       compScore += 0.5;
       console.log(humanScore);
     } else if (humanChoice === "ROCK") {
-      console.log("Paper beats rock you lose");
+      winOrLose = "Paper beats rock you lose";
       humanScore--;
       compScore++;
       console.log(humanScore);
     } else if (humanChoice === "SCISSORS") {
-      console.log("Scissors beats rock you win");
+      winOrLose = "Scissors beats rock you win";
       humanScore++;
       compScore--;
       console.log(humanScore);
     }
   } else if (compChoice === "Scissors") {
     if (humanChoice === "PAPER") {
-      console.log("Scissors beats paper you lose");
+      winOrLose = "Scissors beats paper you lose";
       humanScore--;
       compScore++;
       console.log(humanScore);
     } else if (humanChoice === "ROCK") {
-      console.log("Rock beats scissors you win");
+      winOrLose = "Rock beats scissors you win";
       humanScore++;
       compScore--;
       console.log(humanScore);
     } else if (humanChoice === "SCISSORS") {
-      console.log("Both chose scissors it is a Tie");
+      winOrLose = "Both chose scissors it is a Tie";
       humanScore += 0.5;
       compScore += 0.5;
       console.log(humanScore);
@@ -98,7 +99,7 @@ function playRound() {
   }
   document.getElementById(
     "yourChoice"
-  ).innerText = `Your chose ${humanChoice} Comp choses ${compChoice}`;
+  ).innerText = winOrLose;
   document.getElementById(
     "compScore"
   ).innerText = `${humanScore}`;
