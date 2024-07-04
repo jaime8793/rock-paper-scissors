@@ -43,7 +43,7 @@ function humanChoiceScissorsFunction() {
 // Play round function
 let humanScore = 0;
 let compScore = 0;
-let winOrLose = ""
+let winOrLose = "";
 function playRound() {
   if (compChoice === "Rock") {
     if (humanChoice === "PAPER") {
@@ -52,7 +52,7 @@ function playRound() {
       compScore--;
       console.log(humanScore);
     } else if (humanChoice === "ROCK") {
-      winOrLose = "Both chose rock it is a Tie"
+      winOrLose = "Both chose rock it is a Tie";
       humanScore += 0.5;
       compScore += 0.5;
       console.log(humanScore);
@@ -97,38 +97,19 @@ function playRound() {
       console.log(humanScore);
     }
   }
-  document.getElementById(
-    "yourChoice"
-  ).innerText = winOrLose;
-  document.getElementById(
-    "compScore"
-  ).innerText = `${humanScore}`;
-  document.getElementById(
-    "yourScore"
-  ).innerText = `${compScore}`;
-}
-//playRound();
-
-// Call the functions in the correct order
-
-/*let round = 5;
-function playGame() {
-  for (i = 0; i <= round; i++) {
-    console.log("five times");
-    humanChoiceFunction();
-    computerChoice();
-    console.log(`Human choice: ${humanChoice}`);
-    console.log(`Computer choice: ${compChoice}`);
-    playRound();
+  document.getElementById("yourChoice").innerText = winOrLose;
+  document.getElementById("compScore").innerText = `Your Score: ${humanScore}`;
+  document.getElementById("yourScore").innerText = `Comp Score: ${compScore}`;
+  if (humanScore >= 5) {
+    document.getElementById("yourChoice").innerText =
+      "You Win Scores will reset";
+    humanScore = 0;
+    compScore = 0;
+  }
+  if (compScore >= 5) {
+    document.getElementById("yourChoice").innerText =
+      "Comp Wins Scores will reset";
+    humanScore = 0;
+    compScore = 0;
   }
 }
-playGame();*/
-//humanChoiceFunction();
-//computerChoice();
-console.log(`Human choice: ${humanChoice}`);
-console.log(`Computer choice: ${compChoice}`);
-//playRound();
-console.log(`Final human score: ${humanScore}`);
-console.log(`Final computer score: ${compScore}`);
-
-//UI for the game
