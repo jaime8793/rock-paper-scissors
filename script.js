@@ -45,51 +45,51 @@ let humanScore = 0;
 let compScore = 0;
 function playRound() {
   if (compChoice === "Rock") {
-    if (humanChoice === "paper") {
+    if (humanChoice === "PAPER") {
       console.log("Paper beats Rock you win");
       humanScore++;
       compScore--;
       console.log(humanScore);
-    } else if (humanChoice === "rock") {
+    } else if (humanChoice === "ROCK") {
       console.log("Both chose rock it is a Tie");
       humanScore += 0.5;
       compScore += 0.5;
       console.log(humanScore);
-    } else if (humanChoice === "scissors") {
+    } else if (humanChoice === "SCISSORS") {
       console.log("Rock beats scissors you lose");
       humanScore--;
       compScore++;
       console.log(humanScore);
     }
   } else if (compChoice === "Paper") {
-    if (humanChoice === "paper") {
+    if (humanChoice === "PAPER") {
       console.log("Both chose paper it is a Tie");
       humanScore += 0.5;
       compScore += 0.5;
       console.log(humanScore);
-    } else if (humanChoice === "rock") {
+    } else if (humanChoice === "ROCK") {
       console.log("Paper beats rock you lose");
       humanScore--;
       compScore++;
       console.log(humanScore);
-    } else if (humanChoice === "scissors") {
+    } else if (humanChoice === "SCISSORS") {
       console.log("Scissors beats rock you win");
       humanScore++;
       compScore--;
       console.log(humanScore);
     }
   } else if (compChoice === "Scissors") {
-    if (humanChoice === "paper") {
+    if (humanChoice === "PAPER") {
       console.log("Scissors beats paper you lose");
       humanScore--;
       compScore++;
       console.log(humanScore);
-    } else if (humanChoice === "rock") {
+    } else if (humanChoice === "ROCK") {
       console.log("Rock beats scissors you win");
       humanScore++;
       compScore--;
       console.log(humanScore);
-    } else if (humanChoice === "scissors") {
+    } else if (humanChoice === "SCISSORS") {
       console.log("Both chose scissors it is a Tie");
       humanScore += 0.5;
       compScore += 0.5;
@@ -97,6 +97,7 @@ function playRound() {
     }
   }
 }
+//playRound();
 
 // Call the functions in the correct order
 
