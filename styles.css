@@ -1,20 +1,37 @@
+*{
+   box-sizing: border-box;
+}
+
 body {
   font-family: "Arial", sans-serif;
   text-align: center;
-  background-color: #f4f4f4;
-  margin: 40px;
+  background-color: aliceblue;
+  //margin: 40px;
+  
+  display: flex;
+  height: 100vh;
+}
+
+.game{
+  //display: flex;
+  background: #F5F4EF;
+  border: 1px black solid;
+  padding: 40px;
+  border-radius: 15px;
+  margin: auto;
 }
 
 button {
-  border: 0;
-  outline: none;
+  border: 1px black solid;
+
   padding: 15px 30px;
-  border-radius: 25px;
+  border-radius: 12px;
+  margin: 4px
   cursor: pointer;
   font-size: 18px;
   color: white;
   text-transform: uppercase;
-  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  background: grey;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }

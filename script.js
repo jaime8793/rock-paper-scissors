@@ -96,6 +96,15 @@ function playRound() {
       console.log(humanScore);
     }
   }
+  document.getElementById(
+    "yourChoice"
+  ).innerText = `Your chose ${humanChoice} Comp choses ${compChoice}`;
+  document.getElementById(
+    "compScore"
+  ).innerText = `${humanScore}`;
+  document.getElementById(
+    "yourScore"
+  ).innerText = `${compScore}`;
 }
 //playRound();
 

@@ -9,29 +9,36 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <h1>Rock Paper Scissors Game</h1>
-    <div class="choices">
-      <button
-        id="rpsButtonRock"
-        onclick="humanChoiceRockFunction(); computerChoice(); playRound();"
-      >
-        Rock
-      </button>
-      <button
-        id="rpsButtonPaper"
-        onclick="humanChoicePaperFunction(); computerChoice(); playRound();"
-      >
-        Paper
-      </button>
-      <button
-        id="rpsButtonScissors"
-        onclick="humanChoiceScissorsFunction(); computerChoice(); playRound();"
-      >
-        Scissors
-      </button>
-      <!-- <button onclick="playRound()">
+    <div class="game">
+      <h1>Rock Paper Scissors Game</h1>
+      <div class="choices">
+        <button
+          id="rpsButtonRock"
+          onclick="humanChoiceRockFunction(); computerChoice(); playRound();"
+        >
+          Rock
+        </button>
+        <button
+          id="rpsButtonPaper"
+          onclick="humanChoicePaperFunction(); computerChoice(); playRound();"
+        >
+          Paper
+        </button>
+        <button
+          id="rpsButtonScissors"
+          onclick="humanChoiceScissorsFunction(); computerChoice(); playRound();"
+        >
+          Scissors
+        </button>
+        <!-- <button onclick="playRound()">
         Play Round
       </button> -->
+      </div>
+      <div class="text">
+        <p id="yourChoice">You Chose</p>
+        <p id="yourScore">Your Score: 0</p>
+        <p id="compScore">Computer Score: 0</p>
+      </div>
     </div>
   </body>
 </html>
